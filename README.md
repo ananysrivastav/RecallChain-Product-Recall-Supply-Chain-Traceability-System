@@ -148,8 +148,6 @@ The complete application setup instructions will be added once the frontend and 
 4. Install backend and frontend dependencies.
 5. Start the backend and frontend development servers.
 
-> \*\*Note:\*\* Exact commands, environment-variable names, and SQL import instructions should be added after the corresponding files and scripts are committed to the repository. Do not commit database passwords or other secrets.
-
 ## Assumptions and Limitations
 
 * The project currently uses sample data.
@@ -160,7 +158,6 @@ The complete application setup instructions will be added once the frontend and 
 ## Team
 
 **Team Name:** TraceX
-
 * Anany Kumar Srivastav — Team Lead
 * Tanisha Rawat
 * Dhruv Gupta
