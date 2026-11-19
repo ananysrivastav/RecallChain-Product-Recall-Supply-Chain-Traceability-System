@@ -7,8 +7,10 @@ export async function POST() {
   try {
     const workerResult = await runOSPriorityWorker(`OS-Worker-${Math.floor(1000 + Math.random() * 9000)}`);
     return NextResponse.json(workerResult);
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const message =
+      error instanceof Error ? error.message : 'Internal Server Error';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
@@ -24,7 +26,9 @@ export async function GET() {
       LIMIT 10
     `);
     return NextResponse.json(pending);
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+  } catch (error: unknown) {
+    const message =
+      error instanceof Error ? error.message : 'Internal Server Error';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

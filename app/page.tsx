@@ -51,12 +51,12 @@ export default function EvaluatorRecallDashboard() {
   const [loading, setLoading] = useState(false);
   const [workerLogs, setWorkerLogs] = useState<WorkerTelemetry | null>(null);
 
-  // Form State
+  
   const [batchId, setBatchId] = useState('1');
   const [reason, setReason] = useState('');
   const [severity, setSeverity] = useState<'low' | 'medium' | 'high' | 'critical'>('critical');
 
-  // Traceability Inspection State
+  
   const [selectedRecall, setSelectedRecall] = useState<ActiveRecall | null>(null);
   const [traceData, setTraceData] = useState<{ customers: any[]; stockExposure: any[] } | null>(null);
   const [isTracing, setIsTracing] = useState(false);
@@ -136,7 +136,7 @@ export default function EvaluatorRecallDashboard() {
     }
   };
 
-  // OS Metrics derived from state
+  
   const pendingJobsCount = queue.filter(q => q.status === 'pending').length;
   const criticalCount = queue.filter(q => q.severity === 'critical' && q.status === 'pending').length;
 
